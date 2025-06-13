@@ -42,6 +42,9 @@
       methods: {
   async login() {
     try {
+      console.log('Logging in with:', this.username, this.password);
+
+  
       const response = await fetch('/api/users/login', {
         method: 'POST',
         body: JSON.stringify({
