@@ -21,5 +21,5 @@ module.exports = app;
 
 
 app.use('/api/dogs', dogsRouter);
-app.use('/api/walkrequests/open', walk
-/api/walkers/summary
+app.use('/api/walkrequests/open', walkrequestsopenRouter);
+app.use('/api/walkers/summary', 
