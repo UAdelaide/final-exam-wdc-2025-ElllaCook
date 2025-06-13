@@ -2,13 +2,10 @@ var express = require('express');
 var router = express.Router();
 var db = require('../db');
 
-// Return a summary of each walker with their average rating and number of completed walks.
-
 
 router.get('/', async (req, res) => {
     try {
-    const [rows] = await db.query(`SELECT Dogs.name AS dog_name, Dogs.size,
-    Users.username AS owner_username FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id`
+    const [rows] = await db.query(`-------------------`
     );
     res.json(rows);
 } catch (err) {
@@ -16,5 +13,4 @@ router.get('/', async (req, res) => {
             return res.status(500).json({ error: 'DB error' });
         }
 });
-
 module.exports = router;
