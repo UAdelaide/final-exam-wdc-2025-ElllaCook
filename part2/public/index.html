@@ -52,7 +52,6 @@
       });
 
       const result = await response.json();
-      console.log('Logging in with:', this.username, this.password);
 
       if (response.ok) {
         alert(`Login successful: ${result.message}`);
