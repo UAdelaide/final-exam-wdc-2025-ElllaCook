@@ -18,3 +18,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 module.exports = app;
+
+
+app.use('/api/dogs', 
+/api/walkrequests/open
+/api/walkers/summary
