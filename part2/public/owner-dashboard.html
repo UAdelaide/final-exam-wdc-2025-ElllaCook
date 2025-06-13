@@ -121,7 +121,7 @@
             const res = await fetch('/api/users/logout', {
               method: 'POST'
             });
-            if res.ok
+            if (!res.ok) throw new Error('Log out failed')
           }
         }
 
