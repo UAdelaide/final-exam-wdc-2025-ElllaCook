@@ -10,11 +10,11 @@ router.get('/', function(req, res) {
     try {
     db.query(sql, (err, result) => {
         res.json(result)
-    )}
+    }),
     catch {
             console.error(err);
             return res.status(500).json({ error: 'DB error'})
         }
-});
+}});
 
 module.exports = router;
