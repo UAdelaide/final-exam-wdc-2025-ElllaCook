@@ -13,13 +13,8 @@ router.get('/', function(req, res) {
 
         catch {
             console.error(err);
-            return res.status(500).json({ error: ''})
+            return res.status(500).json({ error: 'DB error'})
         }
-
-        }
-
-
-  res.json(result);
-});
+}));
 
 module.exports = router;
