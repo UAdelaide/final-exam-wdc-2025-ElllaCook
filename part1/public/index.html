@@ -15,11 +15,11 @@
   <img :src="dogImage"/>
   <img :src="dogImage"/>
 
-  <button  type="button" class="name">Show name</button>
-<p v-if="name">Name: Snoopy</p>
-  <button v-else type="button" class="age">Show age</button>
-<p v-if="age">Age: 3 years and 7 months</p>
-  <button v-else type="button" class="breed">Show breed</button>
+  <button v-if="!name" type="button" class="name">Show name</button>
+<p v-else>Name: Snoopy</p>
+  <button v-if="!age" type="button" class="age">Show age</button>
+<p v-else>Age: 3 years and 7 months</p>
+  <button v-if="" type="button" class="breed">Show breed</button>
 <p v-if="breed">Breed: Alsatian</p>
 </div>
   <script>
