@@ -14,13 +14,14 @@
     <p class="lead">Connect with trusted walkers for your beloved dog!</p>
 <form @submit.prevent="login">
   <div>
-    <label for="username">Username</label><input v-model="username" type="text" id="username">
+    <label for="username">Username</label>
+    <input v-model="username" type="text" id="username">
   </div>
-
   <div>
     <label for="password">Password</label>
     <input v-model="password" type="password" id="password">
   </div>
+  <button type="submit">Login</button>
 
 </form>
 
