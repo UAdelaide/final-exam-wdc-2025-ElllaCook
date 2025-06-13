@@ -63,7 +63,7 @@
     </div>
     <p v-else>No walk requests yet.</p>
   </div>
-  <button type="submit">Log out</button>
+  <button type="submit" @click="logout">Log out</button>
 
   <script>
     const { createApp, ref, onMounted } = Vue;
