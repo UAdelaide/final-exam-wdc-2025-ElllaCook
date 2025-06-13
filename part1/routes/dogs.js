@@ -9,16 +9,9 @@ router.get('/', async (req, res) => {
     );
     res.json(rows);
 } catch (err) {
-    
-}
-    try {
-    db.query(sql, (err, result) => {
-        res.json(result)
-    }),
-    catch {
             console.error(err);
             return res.status(500).json({ error: 'DB error'})
         }
-}});
+});
 
 module.exports = router;
