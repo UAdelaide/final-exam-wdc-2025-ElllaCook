@@ -14,7 +14,7 @@
   <script>
     const { createApp } = Vue;
 
-    create App({
+    createApp({
       data() {
         return {
           dogImage: ""
@@ -27,7 +27,7 @@
           this.dogImage = data.message;
         });
       }
-    })
+    }).mount("#app");
   </script>
 </body>
 
