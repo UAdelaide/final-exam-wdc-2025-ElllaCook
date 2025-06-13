@@ -5,7 +5,7 @@ var
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-    
+    query = 'SELECT dog_name, size, owner_username FROM '
   res.render('index', { title: 'Express' });
 });
 
