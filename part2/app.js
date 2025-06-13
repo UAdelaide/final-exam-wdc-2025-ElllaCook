@@ -9,6 +9,14 @@ const session = require('express-session');
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
+
+// Session
+app.use(session({
+  secret: 'blank',
+  resave: false,
+  saveUninitialized: true,
+}));
+
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
