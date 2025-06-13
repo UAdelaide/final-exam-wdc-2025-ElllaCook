@@ -10,7 +10,10 @@ router.get('/', function(req, res) {
     try {
     db.query(sql, (err, result) => {
         res.json(result)
-        try {
+
+        catch {
+            console.error(err)
+        }
 
         }
 
