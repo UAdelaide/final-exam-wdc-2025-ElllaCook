@@ -22,4 +22,4 @@ module.exports = app;
 
 app.use('/api/dogs', dogsRouter);
 app.use('/api/walkrequests/open', walkrequestsopenRouter);
-app.use('/api/walkers/summary', 
+app.use('/api/walkers/summary', walkerssummaryRouter);
