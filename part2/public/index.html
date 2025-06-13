@@ -62,7 +62,7 @@
         } else if (result.user.role === 'walker') {
           window.location.href = '/walker-dashboard.html';
         } else {
-        alert(`Login failed: ${result.error}`);
+        alert(`Unknown role`);
       }
     } catch (err) {
       alert('Error connecting to server.');
