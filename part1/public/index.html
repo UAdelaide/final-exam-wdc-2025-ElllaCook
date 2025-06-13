@@ -5,8 +5,17 @@
   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
+<style>
+  body {
+    animation: flash-bg 1s infinite;
+  }
 
-<body style="background: blue;">
+  @keyframes flash-bg {     0%   { background-color: blue; }
+    50%  { background-color: red; }
+    100% { background-color: blue; }
+  }
+</style>
+<body>
   <div id="app">
     <div style="height: 800px;"></div>
   <h1>Dog of the Day</h1>
