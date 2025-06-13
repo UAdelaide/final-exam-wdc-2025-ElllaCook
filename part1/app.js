@@ -10,8 +10,8 @@ var db = require('./db');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var dogsRouter = require('./routes/dogs');
-var walkrequestsopenRouter = require('.routes/walkrequestsopen');
-var walkerssummaryRouter = require('.routes/walkerssummary');
+var walkrequestsopenRouter = require('./routes/walkrequestsopen');
+var walkerssummaryRouter = require('./routes/walkerssummary');
 
 var app = express();
 
