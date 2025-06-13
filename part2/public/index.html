@@ -60,11 +60,8 @@
         if (result.user.role === 'owner') {
           window.location.href = '/owner-dashboard.html';
         } else if (result.user.role === 'walker') {
-          window.location.href
-        }
-        alert(`Login successful: ${result.message}`);
-
-      } else {
+          window.location.href = '/walker-dashboard.html';
+        } else {
         alert(`Login failed: ${result.error}`);
       }
     } catch (err) {
