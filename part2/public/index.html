@@ -29,9 +29,9 @@
         };
       },
       methods: {
-        async login() {
-try {
-      const response = await fetch('/api/users/login', {
+  async login() {
+    try {
+      const response = await fetch('/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -39,8 +39,22 @@ try {
         body: JSON.stringify({
           username: this.username,
           password: this.password
-        }
+        })
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert(`Login successful: ${result.message}`);
+        // Redirect or store token/session info here
+      } else {
+        alert(`Login failed: ${result.error}`);
       }
+    } catch (err) {
+      alert('Error connecting to server.');
+    }
+  }
+}
     }).mount('#app');
   </script>
 
