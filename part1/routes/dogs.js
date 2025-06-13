@@ -7,8 +7,9 @@ router.get('/', function(req, res) {
     const query = `SELECT Dogs.name AS dog_name, Dogs.size,
     Users.username FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id`;
 
+    db.query(sql, )
 
-  res.json('index', { title: 'Express' });
+  res.json(result);
 });
 
 module.exports = router;
