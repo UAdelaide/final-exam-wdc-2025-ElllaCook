@@ -4,7 +4,8 @@ var db = require('../db');
 
 router.get('/', function(req, res) {
 
-    const query = 'SELECT Dogs.name AS dog_name, Dogs.size, Users.username FROM Dogs JOIN '
+    const query = 'SELECT Dogs.name AS dog_name, Dogs.size,
+    Users.username FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id';
 
 
   res.render('index', { title: 'Express' });
