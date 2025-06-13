@@ -7,7 +7,9 @@ router.get('/', function(req, res) {
     const query = `SELECT Dogs.name AS dog_name, Dogs.size,
     Users.username FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id`;
 
-    db.query(sql, )
+    db.query(sql, (err, result) => {
+        if (err)
+    })
 
   res.json(result);
 });
