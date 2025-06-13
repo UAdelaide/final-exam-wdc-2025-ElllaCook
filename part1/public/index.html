@@ -19,8 +19,8 @@
 <p v-else>Name: Snoopy</p>
   <button v-if="!age" type="button" class="age">Show age</button>
 <p v-else>Age: 3 years and 7 months</p>
-  <button v-if="" type="button" class="breed">Show breed</button>
-<p v-if="breed">Breed: Alsatian</p>
+  <button v-if="!breed" type="button" class="breed">Show breed</button>
+<p v-else>Breed: Alsatian</p>
 </div>
   <script>
     const { createApp } = Vue;
