@@ -2,6 +2,9 @@ var express = require('express');
 var router = express.Router();
 var db = require('../db');
 
+// Return a summary of each walker with their average rating and number of completed walks.
+
+
 router.get('/', async (req, res) => {
     try {
     const [rows] = await db.query(`SELECT Dogs.name AS dog_name, Dogs.size,
