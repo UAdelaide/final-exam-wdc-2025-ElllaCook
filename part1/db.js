@@ -1,5 +1,6 @@
 const mysql = require('mysql2');
 
+
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -7,13 +8,13 @@ const connection = mysql.createConnection({
     database: 'DogWalkService'
 });
 
+
 connection.connect((err) => {
     if (err) {
         console.error('DB connection failed:' + err.message);
     }
     else {
-        console.log
+        console.log('Connected to DB');
     }
-    }
+    });
 
-})
