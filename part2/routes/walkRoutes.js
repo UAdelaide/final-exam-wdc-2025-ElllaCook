@@ -69,6 +69,7 @@ router.get('/dogs', async (req, res) => {
       `SELECT dog_id, name FROM Dogs WHERE user_id = ?`,
       [owner_id]
     );
+    console.log(rows);
     res.json(rows);
   } catch (err) {
     res.status(500).json({ error : "failed to retreive dogs" });
