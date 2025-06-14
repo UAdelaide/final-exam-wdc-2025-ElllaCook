@@ -70,6 +70,8 @@ router.get('/dogs', async (req, res) => {
       [owner_id]
     );
     res.json(rows);
+  } catch (err) {
+    res.status(500).json
   }
 })
 module.exports = router;
