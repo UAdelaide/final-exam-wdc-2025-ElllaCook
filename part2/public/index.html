@@ -75,7 +75,9 @@
       try {
           const response = await fetch('/api/users/dogs');
           const result = await response.json();
-          
+          if (response.ok) {
+            
+          }
 
     }
     }
