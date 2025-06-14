@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
-const { path } = require('app');
+const path = require('path');
 
 
 // OWNER DASH ROUTER
