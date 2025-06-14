@@ -5,6 +5,8 @@ const path = require('path');
 
 // OWNER DASH ROUTER
 router.get('/owner'), (req, res) => {
+
+    if req
     res.sendFile(path.join(__dirname, '../public/owner-dashboard.html'));
 });
 
