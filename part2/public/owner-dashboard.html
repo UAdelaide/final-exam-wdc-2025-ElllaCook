@@ -83,6 +83,7 @@
         });
 
         const walks = ref([]);
+        c
         const message = ref('');
         const error = ref('');
 
@@ -100,7 +101,7 @@
             const res = await fetch('/api/walks/dogs');
             dogs.value = await res.json();
           } catch (err) {
-            error.value = "Failed to load dogs"
+            error.value = "Failed to load dogs";
           }
         }
 
