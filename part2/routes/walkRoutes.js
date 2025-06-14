@@ -70,8 +70,8 @@ router.get('/dogs', async (req, res) => {
       [owner_id]
     );
     res.json(rows);
-  } catch (err) {
-    res.status(500).json
+  } catch (err) {"
+    res.status(500).json({ error : "failed to retreive dogs" })
   }
 })
 module.exports = router;
