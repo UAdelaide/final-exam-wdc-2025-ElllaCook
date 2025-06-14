@@ -74,7 +74,4 @@ router.post('/logout', (req, res) => {
 });
 
 
-// WALKER DASH ROUTER
-app.get('/walker-dashboard')
-// OWNER DASH ROUTER
-
+module.exports = router;
