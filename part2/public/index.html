@@ -101,7 +101,8 @@
 
           this.dogs = dogs
     } catch (err) {
-      this.err 
+      this.error = 'Unable to load dogs';
+      console.error(err);
 
     }
 
