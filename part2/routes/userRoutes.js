@@ -74,9 +74,7 @@ router.post('/logout', (req, res) => {
 });
 
 
-// ROUTER TO WALKERS DASH
-
-// ROUTER TO OWNER DASH
+// ROUTER TO RELEVANT DASH
 
 app.get('/owner-dashboard'), (req, res) => {
   if req.session.user.role === owner
