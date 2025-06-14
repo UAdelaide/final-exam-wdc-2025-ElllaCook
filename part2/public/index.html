@@ -85,7 +85,7 @@
             dogs.map(async (dog) => {
               let photo = '';
               try {
-                const photo1 = await
+                const photo1 = await fetch("https://dog.ceo/api/breeds/image/random")
 
                 photo = photoData.message;
               } catch
@@ -93,7 +93,7 @@
           }
 
     } catch {
-      
+
     }
     },
     mounted() {
