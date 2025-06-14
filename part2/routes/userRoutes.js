@@ -74,12 +74,3 @@ router.post('/logout', (req, res) => {
 });
 
 
-// ROUTER TO RELEVANT DASH
-
-app.get('/owner-dashboard'), (req, res) => {
-  if req.session.user.role === owner
-  res.sendFile(__dirname + '/owner-dashboard.html');
-}
-
-
-module.exports = router;
