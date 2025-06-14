@@ -59,7 +59,7 @@
         async function getUser() {
           try {
             const res = await fetch(`api/users/me`);
-            if (!res.ok) threw new Error('No current user available');
+            if (!res.ok) throw new Error('No current user available');
             user.value = await res.json();
           } catch (err) {
             error.value = err.message;
