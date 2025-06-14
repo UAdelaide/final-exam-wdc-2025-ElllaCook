@@ -79,9 +79,8 @@
           const response = await fetch('/api/dogs');
           if (!response.ok) throw new Error('Unable to load dogs');
           const dogs = await response.json();
-          for i in range dogs {
-            const dogPhotos 
-          }
+
+
           const dogPhotos = await Promise.all(
             dogs.map(async (dog) => {
               let photo = '';
@@ -93,6 +92,8 @@
 
           }
 
+    } catch {
+      
     }
     },
     mounted() {
