@@ -6,7 +6,9 @@ const path = require('path');
 // OWNER DASH ROUTER
 router.get('/owner'), (req, res) => {
 
-    if req
+    if (!req.session || !req.session.user) {
+        return res.redirect('/')
+    }
     res.sendFile(path.join(__dirname, '../public/owner-dashboard.html'));
 });
 
