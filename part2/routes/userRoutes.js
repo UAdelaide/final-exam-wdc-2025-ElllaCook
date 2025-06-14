@@ -79,7 +79,7 @@ router.post('/logout', (req, res) => {
 // ROUTER TO OWNER DASH
 
 app.get('/owner-dashboard'), (req, res) => {
-  if re
+  if req.session.user.role === owner
   res.sendFile(__dirname + '/owner-dashboard.html');
 }
 
