@@ -62,5 +62,7 @@ router.post('/:id/apply', async (req, res) => {
 
 // GET DOGS BY OWNER
 
-router.get('/dogs')
+router.get('/dogs', async (req, res) => {
+  const owner_id = 
+})
 module.exports = router;
