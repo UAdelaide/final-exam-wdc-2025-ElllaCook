@@ -60,6 +60,7 @@
           try {
             const res = await fetch(`api/users/me`);
             if (!res.ok) threw new Error('No current user available');
+            user.value = await 
           }
         }
         async function applyToWalk(requestId) {
