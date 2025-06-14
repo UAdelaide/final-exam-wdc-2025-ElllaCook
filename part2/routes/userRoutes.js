@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
+const app = require('../app');
 
 // GET all users (for admin/testing)
 router.get('/', async (req, res) => {
@@ -77,6 +78,7 @@ router.post('/logout', (req, res) => {
 
 // ROUTER TO OWNER DASH
 
-res.sendFile(__dirname + /owner-dashboard)
+app.get('/owner-dashboard')
+res.sendFile(__dirname + '/owner-dashboard.html');
 
 module.exports = router;
