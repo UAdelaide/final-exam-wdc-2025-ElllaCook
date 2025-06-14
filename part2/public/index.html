@@ -91,7 +91,7 @@
                   photo = photoData.message
                 }
               } catch {
-                // repeat
+                console.error("Photo error" + err);
               }
 
               return { ...dog, photo: photoURL };
