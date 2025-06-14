@@ -7,8 +7,9 @@ const path = require('path');
 router.get('/owner'), (req, res) => {
 
     if (!req.session || !req.session.user) {
-        return res.redirect('/')
+        return res.redirect('/');
     }
+    if (req.session.user.role !== 'owner')
     res.sendFile(path.join(__dirname, '../public/owner-dashboard.html'));
 });
 
