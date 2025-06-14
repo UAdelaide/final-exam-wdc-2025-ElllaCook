@@ -4,7 +4,7 @@ const db = require('../models/db');
 
 
 // WALKER DASH ROUTER
-app.get('/walker')
+router.get('/walker')
 // OWNER DASH ROUTER
 
 module.exports = router;
