@@ -77,7 +77,8 @@
     async dogs() {
       try {
           const response = await fetch('/api/dogs');
-          if (!response.ok) {
+          if (!response.ok) throw new Error('Unable to load dogs');
+          const dogs = await response.json();
 
           }
 
