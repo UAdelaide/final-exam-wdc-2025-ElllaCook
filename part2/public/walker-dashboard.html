@@ -90,7 +90,7 @@
         async function logout() {
           try {
             const res = await fetch('/api/users/logout', {
-              method: 'POST'
+              method: 'POST',
               credentials: 'include',
             });
             if (!res.ok) throw new Error('Failed to log out');
