@@ -95,7 +95,11 @@
           }
         }
 
-        
+        async function loadDogs() {
+          try {
+            const res = await fetch('/api/walks/dogs')
+          }
+        }
 
         async function submitWalkRequest() {
           try {
