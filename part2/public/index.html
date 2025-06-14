@@ -85,7 +85,8 @@
             dogs.map(async (dog) => {
               let photo = '';
               try {
-                const photo1 = await fetch("https://dog.ceo/api/breeds/image/random")
+                const photo1 = await fetch("https://dog.ceo/api/breeds/image/random");
+                photoData = await photo1.json()
 
                 photo = photoData.message;
               } catch
