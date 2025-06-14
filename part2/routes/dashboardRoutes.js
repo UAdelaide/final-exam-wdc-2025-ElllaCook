@@ -17,6 +17,14 @@ router.get('/owner', (req, res) => {
 
 // WALKER DASH ROUTER
 router.get('/walker', (req, res) => {
+
+        if (!req.session || !req.session.user) {
+        return res.redirect('/');
+    }
+    if (req.session.user.role !== 'walker'){
+        return res.status.(403).send('Not authorised'); // incorrect role
+    }
+
     res.sendFile(path.join(__dirname, '../public/walker-dashboard.html'));
 });
 
