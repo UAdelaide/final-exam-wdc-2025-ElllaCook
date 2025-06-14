@@ -79,9 +79,9 @@ router.post('/logout', (req, res) => {
 // ROUTER TO OWNER DASH
 
 app.get('/owner-dashboard'), (req, res) => {
-
-  
+  if re
+  res.sendFile(__dirname + '/owner-dashboard.html');
 }
-res.sendFile(__dirname + '/owner-dashboard.html');
+
 
 module.exports = router;
