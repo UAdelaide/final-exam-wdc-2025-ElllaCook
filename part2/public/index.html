@@ -88,9 +88,11 @@
                 const photo1 = await fetch("https://dog.ceo/api/breeds/image/random");
                 photoData = await photo1.json();
                 if (photoData.status === 'success') {
-                  
+                  photo = photoData.message
                 }
-
+              } catch {
+                
+              }
                 photo = photoData.message;
               } catch
 
