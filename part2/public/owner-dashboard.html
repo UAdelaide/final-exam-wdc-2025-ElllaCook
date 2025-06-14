@@ -122,7 +122,6 @@
               method: 'POST'
             });
             if (!res.ok) throw new Error('Failed to log out');
-            window.location.href = '/';
           } catch (err) {
             error.value = err.message;
           }
