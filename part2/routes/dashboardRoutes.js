@@ -4,7 +4,7 @@ const path = require('path');
 
 
 // OWNER DASH ROUTER
-router.get('/owner'), (req, res) => {
+router.get('/owner', (req, res) => {
 
     if (!req.session || !req.session.user) {
         return res.redirect('/');
@@ -13,10 +13,10 @@ router.get('/owner'), (req, res) => {
         return res.status.(403).send('Not authorised'); // incorrect role
     }
     res.sendFile(path.join(__dirname, '../public/owner-dashboard.html'));
-};
+});
 
 // WALKER DASH ROUTER
-router.get('/walker'), (req, res) => {
+router.get('/walker', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/walker-dashboard.html'));
 });
 
