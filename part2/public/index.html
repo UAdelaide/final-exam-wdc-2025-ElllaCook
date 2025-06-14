@@ -96,7 +96,7 @@
       try {
           const response = await fetch('/api/dogs');
           if (!response.ok) throw new Error('Unable to load dogs');
-          const dogs = await response.json();
+          const dogs = await response.json();console.log("Fetched dogs from API:", dogs);
 
 
           const dogPhotos = await Promise.all(
