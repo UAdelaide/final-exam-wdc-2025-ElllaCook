@@ -10,7 +10,7 @@ router.get('/owner'), (req, res) => {
         return res.redirect('/');
     }
     if (req.session.user.role !== 'owner'){
-        return res.status.(403).send('Not authorised')
+        return res.status.(403).send('Not authorised'); // incorrect role
     }
     res.sendFile(path.join(__dirname, '../public/owner-dashboard.html'));
 });
