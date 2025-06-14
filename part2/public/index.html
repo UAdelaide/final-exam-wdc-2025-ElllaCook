@@ -39,7 +39,7 @@
         username: '',
         password: '',
         dogs : [],
-        error = ''
+        error : ''
       };
     },
     methods: {
@@ -94,7 +94,7 @@
                 console.error("Photo error" + err);
               }
 
-              return { ...dog, photo: photoURL };
+              return { ...dog, photo: photo };
 
             })
           );
