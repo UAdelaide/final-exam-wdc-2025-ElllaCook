@@ -59,4 +59,8 @@ router.post('/:id/apply', async (req, res) => {
   }
 });
 
+
+// GET DOGS BY OWNER
+
+router.get
 module.exports = router;
