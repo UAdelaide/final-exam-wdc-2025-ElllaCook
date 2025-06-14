@@ -77,4 +77,6 @@ router.post('/logout', (req, res) => {
 
 // ROUTER TO OWNER DASH
 
+res.sendFile(__dirname + /owner-dashboard)
+
 module.exports = router;
